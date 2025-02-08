@@ -21,7 +21,6 @@ const RangeSlider = () => {
 
   return (
     <div className={styles.container}>
-      <h3>Filter by Price</h3>
       <div className={styles.rangeSlider}>
         <input
           type="number"
@@ -29,7 +28,7 @@ const RangeSlider = () => {
           value={minValue}
           min="1"
           max="100"
-          onChange={(e) => setMinValue(Math.min(+e.target.value, maxValue))}
+          onChange={(e) => setMinValue(Math.min(+e.target.value, maxValue-1))}
         />
         <input
           type="number"
@@ -37,7 +36,7 @@ const RangeSlider = () => {
           value={maxValue}
           min="1"
           max="100"
-          onChange={(e) => setMaxValue(Math.max(+e.target.value, minValue))}
+          onChange={(e) => setMaxValue(Math.max(+e.target.value, minValue+1))}
         />
         <div className={styles.range}>
           <input
