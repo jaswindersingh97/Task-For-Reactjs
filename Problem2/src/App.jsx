@@ -3,7 +3,7 @@ import RangeSlider from './components/SliderRange'
 
 function App() {
   return (
-    <div>
+    <div style={{padding: '50px'}}>
       <RangeSlider/>
     </div>
   )
