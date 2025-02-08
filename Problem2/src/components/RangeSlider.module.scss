@@ -1,31 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
 
 :root {
-  --blue-color: #357ded;
+  --blue-color:#47B647;
   --gray-color: #77889926;
   --progress-width: 50%;
   --progress-left: 25%;
-}
-
-* {
-  font-family: "Jost", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
 
 .container {
   margin-block: auto;
   background: #fff;
   padding: 30px;
-  border-radius: 10px;
-  width: min(480px, 90%);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
-  text-align: center;
-
-  h3 {
-    font-size: 2rem;
-  }
 }
 
 .rangeSlider {
@@ -35,25 +20,17 @@
   justify-content: space-between;
   gap: 20px;
   padding-block: 20px;
+  width: 480px;
+  box-sizing: border-box;
 }
 
 .range {
-  width: 100%;
+  width: 480px;
   display: grid;
   position: relative;
   z-index: 5;
 }
 
-input[type="number"] {
-  border: none;
-  outline: none;
-  background: var(--gray-color);
-  font-size: 1.5rem;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  min-width: 64px;
-}
 
 input[type="range"] {
   grid-row: 2;
@@ -70,6 +47,14 @@ input[type="range"] {
     background: var(--blue-color);
     border-radius: 50%;
     cursor: pointer;
+    border: 6px solid #fff;
+    :focus{
+      outline: 2px solid #47B647;
+    }
+  }
+  &::-webkit-slider-thumb:active{
+    outline: 2px solid #47B647;
+
   }
 }
 
